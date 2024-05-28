@@ -1,6 +1,6 @@
 // InputBox.test.js
 import { shallowMount } from '@vue/test-utils';
-import InputBox from '@/components/InputBox.vue';
+import InputBox from '../components/InputBox/InputBox.vue';
 
 describe('InputBox.vue', () => {
   it('renders label when passed', () => {
