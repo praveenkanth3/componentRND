@@ -1,6 +1,6 @@
 {
   "name": "comprnd",
-  "version": "4.0.3",
+  "version": "5.0.3",
   "main": "src/index.js",
   "private": false,
   "scripts": {
@@ -8,6 +8,7 @@
     "build": "vue-cli-service build --target lib --name comprnd --dest dist src/index.js",
     "lint": "vue-cli-service lint",
     "test": "jest",
+    "test-watch": "jest --watch",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },

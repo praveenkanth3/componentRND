@@ -5,6 +5,14 @@ module.exports = {
       'json'
       // tell Jest to handle `*.vue` files
     ],
+    collectCoverage: true,
+    collectCoverageFrom: [
+      'src/**/*.vue',
+      'src/**/*.js',
+      'src/**/*.jsx',
+      '!src/main.js', // Exclude main.js if you don't want to cover the entry point
+    ],
+    coverageDirectory: 'coverage',
     transform: {
       // process `*.vue` files with `vue-jest`
       '^.+\\.vue$': 'vue-jest',
