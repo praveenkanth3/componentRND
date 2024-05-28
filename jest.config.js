@@ -1,9 +1,9 @@
 module.exports = {
     moduleFileExtensions: [
+      'vue',
       'js',
-      'json',
+      'json'
       // tell Jest to handle `*.vue` files
-      'vue'
     ],
     transform: {
       // process `*.vue` files with `vue-jest`
