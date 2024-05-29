@@ -11,6 +11,7 @@ module.exports = {
       'src/**/*.js',
       'src/**/*.jsx',
       '!src/main.js', // Exclude main.js if you don't want to cover the entry point
+      '!src/stories/**'
     ],
     coverageDirectory: 'coverage',
     transform: {
