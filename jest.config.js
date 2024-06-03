@@ -16,7 +16,7 @@ module.exports = {
     coverageDirectory: 'coverage',
     transform: {
       // process `*.vue` files with `vue-jest`
-      '^.+\\.vue$': 'vue-jest',
+      "^.+\\.vue$": "@vue/vue2-jest",
       // process `*.js` files with `babel-jest`
       '^.+\\.js$': 'babel-jest'
     },
