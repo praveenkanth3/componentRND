@@ -2,7 +2,6 @@
     <div class="inputContainer">
         <div class="label">{{ label  }}</div>
         <input class="input" :type="inputType" :placeholder="placeholder" :value="value" @input="onChange($event.target.value)" :maxlength="maxlength"/>
-        <button @click="test">dsdsdz</button>
     </div>
 </template>
 

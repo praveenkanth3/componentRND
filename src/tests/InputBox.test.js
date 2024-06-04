@@ -9,13 +9,6 @@ describe('InputBox.vue', () => {
       propsData: { label, value: '', onChange: jest.fn() }
     });
     expect(wrapper.find('.label').text()).toMatch(label);
-    // const button = wrapper.find('button')
-
-    // console.log(button);
-    // const testMethodSpy = jest.spyOn(wrapper.vm, 'test')
-    // button.trigger('click')
-    // await wrapper.vm.$nextTick()
-    // expect(testMethodSpy).toHaveBeenCalled()
   });
 
   it('renders input with correct placeholder', () => {

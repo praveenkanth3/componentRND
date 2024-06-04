@@ -1,4 +1,6 @@
 import CustomButton from '../components/Button/CustomButton.vue';
+import { action } from '@storybook/addon-actions'
+
 
 // More on how to set up stories at: https://storybook.js.org/docs/vue/writing-stories/introduction
 export default {
@@ -13,7 +15,7 @@ export default {
 export const Primary = {
   args: {
     label: 'Button',
-    onClickBtn: () => {}
+    onClickBtn: action('clicked')
   },
   parameters: {
   },
@@ -24,20 +26,20 @@ export const Primary = {
 export const Secondary = {
   args: {
     label: 'Button1',
-    onClickBtn: () => {}
+    onClickBtn: action('clicked')
   },
 };
 
 export const Large = {
   args: {
     label: 'Button2',
-    onClickBtn: () => {}
+    onClickBtn:action('clicked')
   },
 };
 
 export const Small = {
   args: {
     label: 'Button3',
-    onClickBtn: () => {}
+    onClickBtn: action('clicked')
   },
 };
