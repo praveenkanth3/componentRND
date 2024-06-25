@@ -1,5 +1,6 @@
 import InputBox  from "../components/InputBox/InputBox.vue";
-import { within, userEvent } from '@storybook/testing-library';
+import Vue from "vue";
+import { within, userEvent, waitFor, screen } from '@storybook/testing-library';
 
 
 
@@ -9,9 +10,9 @@ export default {
   argTypes: {
     label: { control: 'text' },
     placeholder: { control: 'text' },
-    inputType: { control: 'text' },
+    inputType: { options: ['text', 'password'],control: { type: 'radio' }},
     maxlength: { control: 'text' },
-    onChange: { action: 'onChange' },
+    onChange: { action: 'onChange'},
   },
 };
 
@@ -31,8 +32,10 @@ Default.args = {
 };
 
 Default.play = async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  const input = canvas.getByPlaceholderText('Enter your username');
+  // await Vue.nextTick();
+  // const canvas = within(canvasElement);
+  // const input = canvas.getByPlaceholderText('Enter your username');
+  const input  = await screen.getByPlaceholderText('Enter your username');
   await userEvent.type(input, 'storybook',{
     delay: 100,
   });
@@ -47,13 +50,6 @@ WithPasswordType.args = {
   maxlength: '20',
 };
 
-// WithPasswordType.play = async ({ canvasElement }) => {
-//   const canvas = within(canvasElement);
-//   const input = canvas.getByPlaceholderText('Enter your password');
-//   await userEvent.type(input, 'secretpassword');
-//   expect(input.value).toBe('secretpassword');
-// };
-
 export const WithMaxLength = Template.bind({});
 WithMaxLength.args = {
   label: 'Short Input',
@@ -63,13 +59,3 @@ WithMaxLength.args = {
   maxlength: '5',
 };
 
-// WithMaxLength.play = async ({ canvasElement }) => {
-//   const canvas = within(canvasElement);
-//   const input = canvas.getByPlaceholderText('Enter text (max 5 chars)');
-//   await userEvent.type(input, '123456');
-//   expect(input.value).toBe('12345'); // Ensure maxlength is enforced
-// };
-
-
-    // "@babel/plugin-proposal-optional-chaining": "^7.21.0",
-    // "@babel/plugin-transform-runtime": "^7.24.6",

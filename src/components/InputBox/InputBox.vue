@@ -14,12 +14,10 @@ export default {
 
         label:{
             type: String,
-            required: false
         },
 
         placeholder: {
             type: String,
-            required: false
         },
 
         value: {
@@ -28,19 +26,17 @@ export default {
         
         inputType: {
             type: String,
-            required: false,
             default: 'text'
         },
 
         onChange: {
             type: Function,
-            required: true
+            required:true
         },
 
         maxlength: {
             type: String,
-            required: false,
-            default: '9999'
+            default: "9999"
         }
     },
     methods:{

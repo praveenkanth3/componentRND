@@ -47,7 +47,7 @@ describe('InputBox.vue', () => {
   it('renders input with correct maxlength', () => {
     const maxlength = '10';
     const wrapper = shallowMount(InputBox, {
-      propsData: { maxlength, value: '', onChange: jest.fn() }
+      propsData: { maxlength, inputType: 'number', value: '', onChange: jest.fn() }
     });
     expect(wrapper.find('input').attributes('maxlength')).toBe(maxlength);
   });

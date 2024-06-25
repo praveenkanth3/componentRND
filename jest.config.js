@@ -14,6 +14,7 @@ module.exports = {
       '!src/stories/**'
     ],
     coverageDirectory: 'coverage',
+    coverageProvider: 'v8',
     transform: {
       // process `*.vue` files with `vue-jest`
       "^.+\\.vue$": "@vue/vue2-jest",

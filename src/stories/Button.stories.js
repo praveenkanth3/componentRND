@@ -23,23 +23,3 @@ export const Primary = {
 
 };
 
-export const Secondary = {
-  args: {
-    label: 'Button1',
-    onClickBtn: action('clicked')
-  },
-};
-
-export const Large = {
-  args: {
-    label: 'Button2',
-    onClickBtn:action('clicked')
-  },
-};
-
-export const Small = {
-  args: {
-    label: 'Button3',
-    onClickBtn: action('clicked')
-  },
-};
